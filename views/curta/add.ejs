@@ -1,0 +1,50 @@
+<%- include('../cabecalho')%>
+
+    <div>
+        <tr><a href="../curta"> ← Voltar </a></tr>
+        <h3>Novo Curta</h3>
+
+        <form method="post" enctype="multipart/form-data">
+            <p>Equipe</p>
+            <select name="equipe">
+                <option value="Inválido">Selecione...</option>
+                <option value="Trojan">Trojan</option>
+                <option value="Kitsune">Kitsune</option>
+                <option value="País das Maravilhas">País das Maravilhas</option>
+                <option value="Infolinos">Infolinos</option>
+                <option value="Krakens">Krakens</option>
+            </select>
+
+            <p>Título</p>
+            <input type="text" placeholder="Título do curta..." name="titulo">
+
+            <p>Gênero</p>
+            <select name="genero">
+                <option value="Inválido">Selecione...</option>
+                <option value="Comédia">Comédia</option>
+                <option value="Drama">Drama</option>
+                <option value="Ação">Ação</option>
+                <option value="Suspense">Suspense</option>
+                <option value="Documentário">Documentário</option>
+            </select>
+
+            <p>Sinopse</p>
+            <textarea placeholder="Sinopse do curta..." name="sinopse"></textarea>
+            <p>Duração</p>
+            <input type="number" placeholder="Duração do curta..." name="duracao">
+            <p>Poster</p>
+            <input type="file" name="poster" accept="image/png">
+            <p>Link</p>
+            <input type="text" placeholder="Link do curta do YouTube..." name="link">
+
+            <br><br>
+
+            <button type="submit">Adicionar</button>
+            <button type="reset">Cancelar</button>
+
+        </form>
+
+    </div>
+    </body>
+
+    </html>

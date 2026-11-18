@@ -1,0 +1,40 @@
+<%- include('../cabecalho')%>
+
+    <div>
+        <tr><a href="/entrada"> ← Voltar </a></tr>
+        <h3>Editar entrada</h3>
+
+        <form method="post">
+            <p>ID: </p>
+            <input type="text" name="id" value="<%=entradas.id%>" readonly>
+            
+            <p>Equipe</p>
+            <select name="equipe" value="<%=entradas.equipe%>">
+                <option value="Inválido">Selecione...</option>
+                <option value="Trojan">Trojan</option>
+                <option value="Kitsune">Kitsune</option>
+                <option value="País das Maravilhas">País das Maravilhas</option>
+                <option value="Infolinos">Infolinos</option>
+                <option value="Krakens">Krakens</option>
+            </select>
+
+            <p>Mascote</p>
+            <input type="text" placeholder="Nome do mascote..." name="mascote" value="<%=entradas.mascote%>">
+            <p>Duração</p>
+            <input type="number" placeholder="Duração da entrada..." name="duracao" value="<%=entradas.duracao%>">
+            <p>Tema</p>
+            <input type="text" placeholder="Tema/Ambientação da entrada..." name="tema" value="<%=entradas.tema%>">
+            <p>Música</p>
+            <input type="text" placeholder="Música da Paródia..." name="musicaParodia" value="<%=entradas.musicaParodia%>">
+
+            <br><br>
+
+            <button type="submit">Atualizar</button>
+            <button type="reset">Cancelar</button>
+
+        </form>
+
+    </div>
+    </body>
+
+    </html>

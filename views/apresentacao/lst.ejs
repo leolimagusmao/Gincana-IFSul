@@ -1,0 +1,60 @@
+<%- include('../cabecalho')%>
+
+    <div>
+        <h3>Apresentações da Gincana</h3>
+        <p>Gerencie as apresentações cadastradas na gincana</p>
+        <a href="/apresentacao/add">+ Nova Apresentação</a><br><br>
+<form method="post" action="/apresentacao/lst">
+ <input type="text" name="pesquisar" placeholder="Equipe da entrada">
+ <input type="submit" value="Buscar">
+</form>
+        <table>
+            <tr>
+                <td>
+                    Equipe
+                </td>
+                <td>
+                    Modalidade
+                </td>
+                <td>
+                    Duração
+                </td>
+                <td>
+                    Resumo
+                </td>
+                <td>
+                    Participantes
+                </td>
+                <td>
+                    Ações
+                </td>
+            </tr>
+            <%apresentacoes.forEach(apresentacao=>{%>
+                <tr>
+                    <td>
+                        <%=apresentacao.equipe%>
+                    </td>
+                    <td>
+                        <%=apresentacao.modalidade%>
+                    </td>
+                    <td>
+                        <%=apresentacao.duracao%>
+                    </td>
+                    <td>
+                        <%=apresentacao.resumo%>
+                    </td>
+                    <td>
+                        <%=apresentacao.participantes%>
+                    </td>
+                    <td>
+                        <a href="/apresentacao/upd/<%=apresentacao.id%>">✏️</a>
+                        <a href="/apresentacao/del/<%=apresentacao.id%>">🗑️</a>
+                    </td>
+                </tr>
+                <%})%>
+
+        </table>
+    </div>
+    </body>
+
+    </html>

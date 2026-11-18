@@ -1,0 +1,56 @@
+Curtas
+Equipe: Select (Trojan; Kitsune; País das Maravilhas; Infolinos; Krakens);
+Titulo: String;
+Genero: Select(Comédia; Ação; Terror; Drama; Suspense; Documentário);
+Sinopse: String;
+Duracao: Number;
+Link: Link;
+
+Apresentação Artística
+Equipe: Select (Trojan; Kitsune; País das Maravilhas; Infolinos; Krakens);
+Modalidade: Select (Dança; Música; Teatro);
+Duracao: Number;
+Resumo: String;
+Participantes: Number;
+
+Entrada
+Equipe: Select (Trojan; Kitsune; País das Maravilhas; Infolinos; Krakens);
+Mascote: String;
+Duracao: Number;
+Tema: String;
+MusicaParodia: String;
+
+
+
+
+
+
+Criar a estrutura HTML+CSS de um sistema administrativo(CRUDS) para representar um sistema de gerenciamento de material escolar com as seguintes entidades: 
+
+Curtas
+Equipe: Select (Trojan; Kitsune; País das Maravilhas; Infolinos; Krakens);
+Titulo: String;
+Genero: Select(Comédia; Ação; Terror; Drama; Suspense; Documentário);
+Sinopse: String;
+Duracao: Number;
+Link: Link;
+
+Apresentação Artística
+Equipe: Select (Trojan; Kitsune; País das Maravilhas; Infolinos; Krakens);
+Modalidade: Select (Dança; Música; Teatro);
+Duracao: Number;
+Resumo: String;
+Participantes: Number;
+
+Entrada
+Equipe: Select (Trojan; Kitsune; País das Maravilhas; Infolinos; Krakens);
+Mascote: String;
+Duracao: Number;
+Tema: String;
+MusicaParodia: String;
+
+
+https://youtube.com/@leolimagus
+
+
+FALTA github

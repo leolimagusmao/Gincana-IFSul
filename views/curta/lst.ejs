@@ -1,0 +1,69 @@
+<%- include('../cabecalho')%>
+
+    <div>
+        <h3>Curtas da Gincana</h3>
+        <p>Gerencie os curtas cadastrados na gincana</p>
+        <a href="/curta/add">+ Novo Curta</a><br><br>
+
+<form method="post" action="/curta/lst">
+ <input type="text" name="pesquisar" placeholder="Título do curta">
+ <input type="submit" value="Buscar">
+</form>
+        <table>
+            <tr>
+                <td>
+                    Equipe
+                </td>
+                <td>
+                    Título
+                </td>
+                <td>
+                    Gênero
+                </td>
+                <td>
+                    Sinopse
+                </td>
+                <td>
+                    Duração
+                </td>
+                <td>Poster</td>
+                <td>
+                    Link de Acesso
+                </td>
+                <td>
+                    Ações
+                </td>
+            </tr>
+            <%curtas.forEach(curta=>{%>
+                <tr>
+                    <td>
+                        <%=curta.equipe%>
+                    </td>
+                    <td>
+                        <%=curta.titulo%>
+                    </td>
+                    <td>
+                        <%=curta.genero%>
+                    </td>
+                    <td>
+                        <%=curta.sinopse%>
+                    </td>
+                    <td>
+                        <%=curta.duracao%>
+                    </td>
+                    <td><img src="<%=curta.poster%>" width="150" height="200"></td>
+                    <td>
+                        <a href="<%=curta.link%>" target="_blank">🔗</a>
+                    </td>
+                    <td>
+                        <a href="/curta/upd/<%=curta.id%>">✏️</a>
+                        <a href="/curta/del/<%=curta.id%>">🗑️</a>
+                    </td>
+                </tr>
+                <%})%>
+
+        </table>
+    </div>
+    </body>
+
+    </html>

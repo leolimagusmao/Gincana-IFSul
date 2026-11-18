@@ -1,0 +1,60 @@
+<%- include('../cabecalho')%>
+
+    <div>
+        <h3>Entradas da Gincana</h3>
+        <p>Gerencie as entradas cadastrados na gincana</p>
+        <a href="/entrada/add">+ Nova Entrada</a><br><br>
+<form method="post" action="/entrada/lst">
+ <input type="text" name="pesquisar" placeholder="Equipe da entrada">
+ <input type="submit" value="Buscar">
+</form>
+        <table>
+            <tr>
+                <td>
+                    Equipe
+                </td>
+                <td>
+                    Mascote
+                </td>
+                <td>
+                    Duração
+                </td>
+                <td>
+                    Tema
+                </td>
+                <td>
+                    Música da Paródia
+                </td>
+                <td>
+                    Ações
+                </td>
+            </tr>
+            <%entradas.forEach(entrada=>{%>
+                <tr>
+                    <td>
+                        <%=entrada.equipe%>
+                    </td>
+                    <td>
+                        <%=entrada.mascote%>
+                    </td>
+                    <td>
+                        <%=entrada.duracao%>
+                    </td>
+                    <td>
+                        <%=entrada.tema%>
+                    </td>
+                    <td>
+                        <%=entrada.musicaParodia%>
+                    </td>
+                    <td>
+                        <a href="/entrada/upd/<%=entrada.id%>">✏️</a>
+                        <a href="/entrada/del/<%=entrada.id%>">🗑️</a>
+                    </td>
+                </tr>
+                <%})%>
+
+        </table>
+    </div>
+    </body>
+
+    </html>
